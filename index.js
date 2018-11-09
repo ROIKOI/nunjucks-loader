@@ -103,7 +103,7 @@ module.exports = function (source) {
     compiledTemplate += '\tenv = nunjucks.currentEnv;\n';
     compiledTemplate += '}\n';
     if (pathToConfigure) {
-        compiledTemplate += 'var configure = require("' + slash(path.relative(this.context, pathToConfigure)) + '")(env);\n';
+        compiledTemplate += 'var configure = require("' + pathToConfigure + '")(env);\n';
     }
 
 
